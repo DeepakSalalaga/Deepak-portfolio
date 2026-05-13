@@ -101,7 +101,7 @@ function Skills() {
         <div className="skills-hero">
           <div className="section-heading">
             <p className="section-label">Skills</p>
-            <h2>Core Skills & Tools</h2>
+            <h2>Tools I actively use in real projects</h2>
           </div>
 
           <div className="skills-summary">

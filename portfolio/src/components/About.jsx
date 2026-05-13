@@ -19,10 +19,7 @@ function About() {
         {/* Content Below */}
         <div className="about-content">
           <p>
-            I create digital work that is clean, easy to understand, and
-            connected to real business goals. My strength is combining visual
-            design, user experience thinking, and campaign awareness so every
-            screen supports both users and growth.
+            I design clean, user-focused digital experiences that connect business goals with intuitive interfaces.
           </p>
 
           <p>

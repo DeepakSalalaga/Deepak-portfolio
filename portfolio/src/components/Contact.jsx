@@ -1,3 +1,5 @@
+const resumeUrl = "/Deepak-Salagala-Resume.pdf";
+
 function Contact() {
   return (
     <section id="contact" className="section contact-section">
@@ -42,12 +44,19 @@ function Contact() {
 
               <div className="contact-direct-links">
                 <a href="mailto:deepakchintu32@gmail.com">Email</a>
+                <a href="tel:+916304457441">+91 6304457441</a>
                 <a
                   href="https://www.linkedin.com/in/salagala-deepak-a259a424b"
                   target="_blank"
                   rel="noreferrer"
                 >
                   LinkedIn
+                </a>
+                {/* <a href={resumeUrl} target="_blank" rel="noreferrer">
+                  Preview Resume
+                </a> */}
+                <a href={resumeUrl} download>
+                  Download Resume
                 </a>
               </div>
             </div>
@@ -85,7 +94,7 @@ function Contact() {
 
               <label className="form-field">
                 <span>Phone</span>
-                <input type="tel" name="phone" placeholder="+91 98765 43210" />
+                <input type="tel" name="phone" placeholder="+91 98xxx xxx 10" />
               </label>
 
               <label className="form-field">

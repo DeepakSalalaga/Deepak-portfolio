@@ -1,5 +1,7 @@
 import heroImage from "../assets/Deepak.png.png";
 
+const resumeUrl = "/Deepak-Salagala-Resume.pdf";
+
 const proofPoints = [
   "Worked on MaaBooking platform",
   "Designed marketing creatives & UI",
@@ -15,9 +17,7 @@ function Hero() {
           <h1>Salagala Deepak</h1>
           <p className="hero-role">UI/UX Designer & Digital Marketer</p>
           <p className="hero-copy">
-            I help brands grow through high-converting UI design and
-            performance marketing. Specialized in Meta Ads, Google Ads, and
-            user-focused digital experiences.
+            I design user-focused interfaces and performance-driven creatives that improve user experience and business results.
           </p>
 
           <ul className="proof-list" aria-label="Professional proof points">
@@ -30,8 +30,11 @@ function Hero() {
             <a className="primary-btn" href="/projects">
               View Projects
             </a>
-            <a className="secondary-btn" href="/contact">
-              Hire Me
+            {/* <a className="secondary-btn" href={resumeUrl} target="_blank" rel="noreferrer">
+              Preview Resume
+            </a> */}
+            <a className="secondary-btn" href={resumeUrl} download>
+              Download Resume
             </a>
           </div>
         </div>

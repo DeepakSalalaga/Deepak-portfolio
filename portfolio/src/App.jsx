@@ -6,6 +6,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import MaaBookingCaseStudy from "./components/MaaBookingCaseStudy";
 import "./styles/global.css";
 
 const routes = {
@@ -14,6 +15,7 @@ const routes = {
   "/experience": <Experience />,
   "/skills": <Skills />,
   "/projects": <Projects />,
+  "/projects/maabooking": <MaaBookingCaseStudy />,
   "/contact": <Contact />,
 };
 

@@ -1,14 +1,16 @@
 const projects = [
   {
     category: "Case Study",
-    title: "MaaBooking Platform – UI/UX Case Study",
+    title: "MaaBooking Platform - UI/UX Case Study",
     subtitle: "Product interface and booking journey",
     description:
       "Designed a streamlined booking experience with clear service structure and a conversion-focused user flow.",
-    outcome: "Improved visual hierarchy, making the booking journey clearer and easier for users to complete.",
+    outcome:
+      "Improved visual hierarchy, making the booking journey clearer and easier for users to complete.",
     deliverables: ["User flow", "Responsive screens", "Landing sections"],
     tools: ["UI/UX", "React", "CSS"],
     theme: "case-study",
+    caseStudyUrl: "/projects/maabooking",
   },
   {
     category: "Graphic Design",
@@ -16,7 +18,8 @@ const projects = [
     subtitle: "Visual communication for digital and print",
     description:
       "Clean creative layouts designed for brand presentation, social media communication, brochure content, and promotional use.",
-    outcome: "Created professional assets with stronger readability, spacing, and brand consistency.",
+    outcome:
+      "Created professional assets with stronger readability, spacing, and brand consistency.",
     deliverables: ["Social creatives", "Brochure layouts", "Brand assets"],
     tools: ["Figma", "Canva", "Layout Design"],
     theme: "graphic-design",
@@ -27,7 +30,8 @@ const projects = [
     subtitle: "Marketing execution with performance intent",
     description:
       "Campaign-focused work covering ad creative direction, content planning, audience thinking, and platform-ready marketing assets.",
-    outcome: "Created clearer messaging and performance-focused creatives to improve user engagement.",
+    outcome:
+      "Created clearer messaging and performance-focused creatives to improve user engagement.",
     deliverables: ["Meta Ads creatives", "Campaign content", "Performance-focused copy"],
     tools: ["Meta Ads", "Google Ads", "Creative Testing"],
     theme: "digital-marketing",
@@ -47,7 +51,8 @@ function Projects() {
           <div className="projects-summary">
             <h3>Each project focuses on clarity, usability, and business impact.</h3>
             <p>
-              I combine UI design, branding, and marketing execution to deliver practical digital solutions.
+              I combine UI design, branding, and marketing execution to deliver
+              practical digital solutions.
             </p>
           </div>
         </div>
@@ -87,6 +92,12 @@ function Projects() {
                     <span key={tool}>{tool}</span>
                   ))}
                 </div>
+
+                {project.caseStudyUrl ? (
+                  <a className="project-case-link" href={project.caseStudyUrl}>
+                    View Case Study
+                  </a>
+                ) : null}
               </div>
             </article>
           ))}

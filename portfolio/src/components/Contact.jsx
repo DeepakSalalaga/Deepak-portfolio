@@ -1,4 +1,4 @@
-const resumeUrl = "/Deepak-Salagala-Resume.pdf";
+const resumeUrl = "/Deepak%20UIUX%20Designer%20Resume.pdf";
 
 function Contact() {
   return (
@@ -46,7 +46,7 @@ function Contact() {
                 <a href="mailto:deepakchintu32@gmail.com">Email</a>
                 <a href="tel:+916304457441">+91 6304457441</a>
                 <a
-                  href="https://www.linkedin.com/in/salagala-deepak-a259a424b"
+                  href="https://www.linkedin.com/in/salagala-deepak"
                   target="_blank"
                   rel="noreferrer"
                 >

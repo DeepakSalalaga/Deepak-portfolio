@@ -1,6 +1,6 @@
 import heroImage from "../assets/Deepak.png.png";
 
-const resumeUrl = "/Deepak-Salagala-Resume.pdf";
+const resumeUrl = "/Deepak%20UIUX%20Designer%20Resume.pdf";
 
 const proofPoints = [
   "Worked on MaaBooking platform",

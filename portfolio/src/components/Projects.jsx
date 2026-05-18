@@ -1,14 +1,26 @@
 const projects = [
   {
     category: "Case Study",
-    title: "MaaBooking Platform - UI/UX Case Study",
+    title: "Hecto - UI/UX Case Study",
+    subtitle: "Product experience and interface storytelling",
+    description:
+      "Built a clear product case study around user needs, visual hierarchy, responsive layout decisions, and polished presentation.",
+    outcome:
+      "Presented the project as a professional UX story with stronger structure, cleaner screens, and easier-to-follow design decisions.",
+    deliverables: ["UX research", "User flow", "Interface screens"],
+    tools: ["Figma", "UI/UX", "Visual Design"],
+    theme: "case-study",
+  },
+  {
+    category: "Case Study",
+    title: "MaaBooking - UI/UX Case Study",
     subtitle: "Product interface and booking journey",
     description:
-      "Designed a streamlined booking experience with clear service structure and a conversion-focused user flow.",
+      "Designed a streamlined booking experience with clear service structure, trust-building content, and a conversion-focused user flow.",
     outcome:
       "Improved visual hierarchy, making the booking journey clearer and easier for users to complete.",
-    deliverables: ["User flow", "Responsive screens", "Landing sections"],
-    tools: ["UI/UX", "React", "CSS"],
+    deliverables: ["Booking flow", "Responsive screens", "Landing sections"],
+    tools: ["Figma", "UI/UX", "React"],
     theme: "case-study",
     caseStudyUrl: "/projects/maabooking",
   },
@@ -45,14 +57,14 @@ function Projects() {
         <div className="projects-hero">
           <div className="section-heading">
             <p className="section-label">Projects</p>
-            <h2>Projects That Solve Design & Marketing Challenges.</h2>
+            <h2>Case studies and creative work with practical outcomes.</h2>
           </div>
 
           <div className="projects-summary">
-            <h3>Each project focuses on clarity, usability, and business impact.</h3>
+            <h3>Featured work across UX design, graphic design, and digital marketing.</h3>
             <p>
-              I combine UI design, branding, and marketing execution to deliver
-              practical digital solutions.
+              Hecto and MaaBooking highlight my case-study process, while the
+              creative and marketing projects show hands-on execution.
             </p>
           </div>
         </div>

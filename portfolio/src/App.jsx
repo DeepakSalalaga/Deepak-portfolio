@@ -7,6 +7,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import MaaBookingCaseStudy from "./components/MaaBookingCaseStudy";
+import Hecto from "./components/Hecto";
 import "./styles/global.css";
 
 const routes = {
@@ -16,6 +17,7 @@ const routes = {
   "/skills": <Skills />,
   "/projects": <Projects />,
   "/projects/maabooking": <MaaBookingCaseStudy />,
+  "/projects/hecto": <Hecto />,
   "/contact": <Contact />,
 };
 

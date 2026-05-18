@@ -15,11 +15,12 @@ function Hero() {
         <div className="hero-content">
           <p className="eyebrow">Creative digital studio energy</p>
           <h1>Salagala Deepak</h1>
-          <p className="hero-role">UI/UX Designer & Digital Marketer</p>
+          <p className="hero-role">UI/UX Designer • Branding</p>
           <p className="hero-copy">
-            I design user-focused interfaces and performance-driven creatives that improve user experience and business results.
+            Designing clean and user-friendly digital experiences
           </p>
-
+          <p className="hero-copy">
+            I create intuitive interfaces that simplify user journeys and improve usability while supporting business goals.</p>
           <ul className="proof-list" aria-label="Professional proof points">
             {proofPoints.map((point) => (
               <li key={point}>{point}</li>

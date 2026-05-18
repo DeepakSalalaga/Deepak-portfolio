@@ -1,119 +1,93 @@
-const heroTags = ["UI/UX", "Booking Flow", "Digital Marketing"];
+const heroTags = ["UI/UX", "Booking Flow", "React"];
 
 const overviewCards = [
-  { label: "Role", value: "UI/UX Designer & Digital Marketer" },
-  { label: "Duration", value: "2024" },
-  { label: "Tools", value: "Figma, Illustration, Adobe XD, Photoshop" },
-  { label: "Focus", value: "User Experience & Conversion Flow" },
+  { label: "Role", value: "UI/UX Designer" },
+  { label: "Duration", value: "2024 - present" },
+  { label: "Tools", value: "Figma, Adobe XD, Sketch" },
+  { label: "Focus", value: "User Experience" },
 ];
 
-const painPoints = [
-  "Visual hierarchy issue",
-  "Unclear booking flow",
-  "Information overload",
+const problems = [
+  "Confusing booking flow",
+  "Too many steps",
+  "Poor visual hierarchy",
 ];
 
 const goals = [
-  "Simplify booking experience",
-  "Improve visual clarity",
-  "Create conversion-focused flow",
-  "Build responsive experience",
-];
-
-const users = [
-  {
-    title: "Weekend travelers",
-    needs: "Fast property discovery with clear price and availability information.",
-    expectations: "Simple browsing, trustworthy visuals, and quick decision-making.",
-    behavior: "Compare multiple options before choosing a short-stay destination.",
-  },
-  {
-    title: "Friend groups",
-    needs: "Easy filtering for group-friendly farmhouses, amenities, and space.",
-    expectations: "Large images, clear capacity details, and simple sharing.",
-    behavior: "Browse together and choose based on visuals, location, and value.",
-  },
-  {
-    title: "Families planning outings",
-    needs: "Reliable information about safety, facilities, and booking details.",
-    expectations: "Clean content structure and confidence before inquiry or booking.",
-    behavior: "Spend more time checking details before taking action.",
-  },
-];
-
-const contributions = [
-  "UI/UX Design",
-  "Layout structuring",
-  "Marketing creatives",
-  /*"Frontend implementation",*/
-  "Visual hierarchy planning",
-];
-
-const approach = [
-  "User-first thinking",
-  "Clear CTA placement",
-  "Minimal layout strategy",
-  "Mobile responsiveness",
+  "Simplify booking process",
+  "Improve clarity",
+  "Reduce user friction",
+  "Improve navigation",
 ];
 
 const processSteps = [
   {
     title: "Research",
-    text: "Studied common issues in booking platforms including cluttered interfaces and unclear navigation.",
+    text: "Identified the key points where users need clearer property details, pricing, and booking actions.",
   },
   {
-    title: "Wireframing",
-    text: "Structured layouts to prioritize property images, booking details, and user actions.",
+    title: "Wireframes",
+    text: "Mapped low-fidelity layouts around browsing, listing comparison, and the booking flow.",
   },
   {
     title: "UI Design",
-    text: "Designed modern interfaces with balanced spacing, typography, and visual clarity.",
+    text: "Created a clean interface system with stronger hierarchy, spacious sections, and visible CTAs.",
   },
-  /*{
-    title: "Frontend Development",
-    text: "Built responsive layouts using React and CSS for consistency across devices.",
-  },*/
+  {
+    title: "Testing",
+    text: "Reviewed the flow for clarity, content order, and reduced friction across responsive screens.",
+  },
 ];
 
-const features = [
-  "Clear property listing layout",
-  "Easy navigation",
-  "Structured booking flow",
-  "Responsive UI",
-  "Marketing-focused CTA sections",
+const wireframes = [
+  "Homepage structure",
+  "Listing exploration",
+  "Booking steps",
 ];
 
-const showcase = [
-  "Homepage Design",
-  "Listing Page",
-  "Booking Flow",
-  "Mobile Responsive Screens",
+const uiScreens = [
+  {
+    title: "Home Screen",
+    caption: "A clear entry point that helps users understand the platform and start exploring quickly.",
+  },
+  {
+    title: "Listing Screen",
+    caption: "Structured property cards make browsing, comparison, and decision-making easier.",
+  },
+  {
+    title: "Booking Flow",
+    caption: "A simplified step-by-step flow reduces uncertainty before users confirm their booking.",
+  },
+  {
+    title: "Responsive Experience",
+    caption: "Mobile-friendly layouts keep navigation, images, and CTAs easy to scan on smaller screens.",
+  },
+];
+
+const solutions = [
+  "Clean and intuitive UI",
+  "Improved CTA visibility",
+  "Structured layout system",
+  "Better readability",
 ];
 
 const outcomes = [
-  "Better visual hierarchy",
-  "Improved booking clarity",
-  "Cleaner navigation",
-  "More engaging UI",
-];
-
-const learnings = [
-  "Conversion-focused design",
-  "Responsive thinking",
-  "Design consistency",
-  "UX-driven layouts",
+  "Improved user journey clarity",
+  "Easier booking experience",
+  "More structured flow",
 ];
 
 function MaaBookingCaseStudy() {
   return (
-    <section className="case-study-page">
-      <div className="case-hero">
+    <main className="case-study-page">
+      <section className="case-hero" aria-labelledby="maabooking-title">
         <div className="container case-hero-grid">
           <div className="case-hero-content">
-            <p className="section-label">Case Study</p>
-            <h1>MaaBooking Platform - UI/UX Case Study</h1>
+            <p className="section-label">UI/UX Case Study</p>
+            <h1 id="maabooking-title">MaaBooking Platform</h1>
             <p className="case-subtitle">
-              Designing a simple and conversion-focused booking experience for farmhouses.
+              Designing a seamless farmhouse booking experience with improved
+              clarity and usability.
             </p>
 
             <div className="case-tags" aria-label="Project tags">
@@ -123,22 +97,22 @@ function MaaBookingCaseStudy() {
             </div>
           </div>
 
-          <div className="case-mockup" aria-label="MaaBooking platform mockup">
-            <div className="mockup-browser">
+          <figure className="case-mockup hero-image" aria-label="MaaBooking platform UI placeholder">
+            <div className="mockup-browser" aria-hidden="true">
               <span></span>
               <span></span>
               <span></span>
             </div>
             <div className="mockup-hero-card"></div>
-            <div className="mockup-grid">
+            <div className="mockup-grid" aria-hidden="true">
               <span></span>
               <span></span>
               <span></span>
             </div>
-          </div>
+          </figure>
         </div>
 
-        <div className="container case-overview-grid">
+        <div className="container case-overview-grid" aria-label="Project overview">
           {overviewCards.map((card) => (
             <article className="case-stat-card" key={card.label}>
               <span>{card.label}</span>
@@ -146,47 +120,44 @@ function MaaBookingCaseStudy() {
             </article>
           ))}
         </div>
-      </div>
+      </section>
 
       <div className="container case-content">
-        <section className="case-section case-text-block">
-          <p className="section-label">Project Overview</p>
-          <h2>Project Overview</h2>
+        <section className="case-section case-text-block" aria-labelledby="overview-heading">
+          <p className="section-label">Overview</p>
+          <h2 id="overview-heading">A focused booking experience for farmhouse stays</h2>
           <p>
-            MaaBooking is a farmhouse booking platform designed to simplify property
-            discovery and booking for users.
-          </p>
-          <p>
-            The goal was to create a clean, easy-to-understand interface that improves
-            user engagement and supports conversions.
+            MaaBooking helps users discover and book farmhouses with less effort.
+            The case study focuses on simplifying the experience from the first
+            browse to the final booking action.
           </p>
         </section>
 
-        <section className="case-section">
-          <div className="case-section-heading">
+        <section className="case-section case-split" aria-labelledby="problem-heading">
+          <div>
             <p className="section-label">Problem</p>
-            <h2>The Problem</h2>
+            <h2 id="problem-heading">Users needed a clearer path to booking</h2>
             <p>
-              Users often face confusion while browsing and booking farmhouses due to
-              cluttered layouts, unclear information, and poor navigation. This creates
-              friction in the booking journey and reduces user confidence.
+              The existing experience made it harder for users to understand
+              available properties, compare details, and move confidently through
+              the booking journey.
             </p>
           </div>
 
           <div className="case-card-grid">
-            {painPoints.map((point) => (
-              <article className="case-card" key={point}>
-                <span className="case-card-index">Pain point</span>
-                <h3>{point}</h3>
+            {problems.map((problem) => (
+              <article className="case-card" key={problem}>
+                <span className="case-card-index">Issue</span>
+                <h3>{problem}</h3>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="case-section">
+        <section className="case-section" aria-labelledby="goal-heading">
           <div className="case-section-heading">
-            <p className="section-label">Goals</p>
-            <h2>Project Goals</h2>
+            <p className="section-label">Goal</p>
+            <h2 id="goal-heading">Design goals</h2>
           </div>
 
           <div className="case-card-grid case-card-grid-four">
@@ -198,61 +169,10 @@ function MaaBookingCaseStudy() {
           </div>
         </section>
 
-        <section className="case-section">
-          <div className="case-section-heading">
-            <p className="section-label">Audience</p>
-            <h2>Target Users</h2>
-          </div>
-
-          <div className="persona-grid">
-            {users.map((user) => (
-              <article className="persona-card" key={user.title}>
-                <h3>{user.title}</h3>
-                <p><strong>User needs:</strong> {user.needs}</p>
-                <p><strong>Expectations:</strong> {user.expectations}</p>
-                <p><strong>Booking behavior:</strong> {user.behavior}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="case-section case-split">
-          <div>
-            <p className="section-label">My Role</p>
-            <h2>My Contribution</h2>
-          </div>
-          <div className="case-list-card">
-            {contributions.map((item) => (
-              <span key={item}>{item}</span>
-            ))}
-          </div>
-        </section>
-
-        <section className="case-section case-split">
-          <div>
-            <p className="section-label">Approach</p>
-            <h2>Design Approach</h2>
-            <p>
-              I focused on creating a clean visual hierarchy and intuitive booking
-              journey that guides users naturally from discovery to booking.
-            </p>
-            <p>
-              The interface was designed to support both user experience and business
-              conversion goals.
-            </p>
-          </div>
-
-          <div className="case-list-card">
-            {approach.map((item) => (
-              <span key={item}>{item}</span>
-            ))}
-          </div>
-        </section>
-
-        <section className="case-section">
+        <section className="case-section" aria-labelledby="process-heading">
           <div className="case-section-heading">
             <p className="section-label">Process</p>
-            <h2>Design Process</h2>
+            <h2 id="process-heading">Research to refinement</h2>
           </div>
 
           <div className="case-timeline">
@@ -268,56 +188,80 @@ function MaaBookingCaseStudy() {
           </div>
         </section>
 
-        <section className="case-section">
+        <section className="case-section" aria-labelledby="wireframes-heading">
           <div className="case-section-heading">
-            <p className="section-label">Features</p>
-            <h2>Key Features</h2>
-          </div>
-
-          <div className="case-card-grid case-card-grid-five">
-            {features.map((feature) => (
-              <article className="case-card" key={feature}>
-                <h3>{feature}</h3>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="case-section">
-          <div className="case-section-heading">
-            <p className="section-label">UI Showcase</p>
-            <h2>UI Showcase</h2>
+            <p className="section-label">Wireframes</p>
+            <h2 id="wireframes-heading">Low-fidelity layouts</h2>
+            <p>Low-fidelity layouts focusing on structure and flow.</p>
           </div>
 
           <div className="showcase-grid">
-            {showcase.map((item) => (
-              <article className="showcase-card" key={item}>
-                <div className="showcase-mockup">
+            {wireframes.map((wireframe) => (
+              <article className="showcase-card" key={wireframe}>
+                <div className="showcase-mockup wireframe-image" aria-label={`${wireframe} placeholder`}>
                   <span></span>
                   <span></span>
                   <span></span>
                 </div>
-                <h3>{item}</h3>
+                <h3>{wireframe}</h3>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="case-section case-outcome-section">
+        <section className="case-section" aria-labelledby="final-ui-heading">
           <div className="case-section-heading">
-            <p className="section-label">Outcome</p>
-            <h2>Project Outcome</h2>
+            <p className="section-label">Final UI</p>
+            <h2 id="final-ui-heading">UI showcase</h2>
             <p>
-              The redesigned interface improved booking clarity, strengthened visual
-              hierarchy, and created a more engaging user experience.
-            </p>
-            <p>
-              The project helped create a smoother booking journey with better usability
-              and clearer content structure.
+              Large responsive screen placeholders show the final layout direction
+              for the core booking experience.
             </p>
           </div>
 
-          <div className="case-card-grid case-card-grid-four">
+          <div className="showcase-grid">
+            {uiScreens.map((screen) => (
+              <article className="showcase-card" key={screen.title}>
+                <div className="showcase-mockup ui-showcase-image" aria-label={`${screen.title} UI placeholder`}>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <h3>{screen.title}</h3>
+                <p>{screen.caption}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="case-section case-split" aria-labelledby="solution-heading">
+          <div>
+            <p className="section-label">Solution</p>
+            <h2 id="solution-heading">A cleaner system for faster decisions</h2>
+            <p>
+              The redesign organizes content into clearer sections, gives booking
+              actions more visibility, and supports users with a calmer visual flow.
+            </p>
+          </div>
+
+          <div className="case-list-card">
+            {solutions.map((solution) => (
+              <span key={solution}>{solution}</span>
+            ))}
+          </div>
+        </section>
+
+        <section className="case-section case-outcome-section" aria-labelledby="outcome-heading">
+          <div className="case-section-heading">
+            <p className="section-label">Outcome</p>
+            <h2 id="outcome-heading">A more confident booking journey</h2>
+            <p>
+              The final experience gives users a more structured way to browse,
+              understand property details, and continue toward booking.
+            </p>
+          </div>
+
+          <div className="case-card-grid">
             {outcomes.map((outcome) => (
               <article className="case-card" key={outcome}>
                 <h3>{outcome}</h3>
@@ -326,35 +270,27 @@ function MaaBookingCaseStudy() {
           </div>
         </section>
 
-        <section className="case-section case-split">
-          <div>
-            <p className="section-label">Learnings</p>
-            <h2>What I Learned</h2>
-            <p>
-              This project strengthened my understanding of how UI/UX design and
-              marketing strategy work together to support both user experience and
-              business goals.
-            </p>
-          </div>
-
-          <div className="case-list-card">
-            {learnings.map((item) => (
-              <span key={item}>{item}</span>
-            ))}
-          </div>
+        <section className="case-section case-text-block" aria-labelledby="learnings-heading">
+          <p className="section-label">Learnings</p>
+          <h2 id="learnings-heading">What this project strengthened</h2>
+          <p>
+            This project helped me understand how small UX decisions, such as
+            content order, CTA placement, and visual hierarchy, can make a booking
+            experience feel more trustworthy and easier to complete.
+          </p>
         </section>
 
-        <section className="case-final-cta">
+        <section className="case-final-cta" aria-labelledby="cta-heading">
           <p className="section-label">Next</p>
-          <h2>Interested in more projects?</h2>
-          <p>Let us connect and build meaningful digital experiences.</p>
+          <h2 id="cta-heading">Explore more design work</h2>
+          <p>View more projects or get in touch to discuss thoughtful digital experiences.</p>
           <div className="hero-actions">
-            <a className="primary-btn" href="/projects">View More Projects</a>
+            <a className="primary-btn" href="/projects">View Projects</a>
             <a className="secondary-btn" href="/contact">Contact Me</a>
           </div>
         </section>
       </div>
-    </section>
+    </main>
   );
 }
 

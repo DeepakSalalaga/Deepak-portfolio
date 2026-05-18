@@ -1,115 +1,266 @@
 const projects = [
   {
     category: "Case Study",
-    title: "Hecto - UI/UX Case Study",
-    subtitle: "Product experience and interface storytelling",
+    title: "MaaBooking Platform",
     description:
-      "Built a clear product case study around user needs, visual hierarchy, responsive layout decisions, and polished presentation.",
-    outcome:
-      "Presented the project as a professional UX story with stronger structure, cleaner screens, and easier-to-follow design decisions.",
-    deliverables: ["UX research", "User flow", "Interface screens"],
-    tools: ["Figma", "UI/UX", "Visual Design"],
-    theme: "case-study",
-  },
-  {
-    category: "Case Study",
-    title: "MaaBooking - UI/UX Case Study",
-    subtitle: "Product interface and booking journey",
-    description:
-      "Designed a streamlined booking experience with clear service structure, trust-building content, and a conversion-focused user flow.",
-    outcome:
-      "Improved visual hierarchy, making the booking journey clearer and easier for users to complete.",
-    deliverables: ["Booking flow", "Responsive screens", "Landing sections"],
-    tools: ["Figma", "UI/UX", "React"],
-    theme: "case-study",
+      "Redesigned the booking experience to improve clarity, usability, and user flow.",
+    tags: ["UI/UX", "Figma", "React"],
     caseStudyUrl: "/projects/maabooking",
+    accent: "#20d36b",
+    tint: "#eafff1",
+    panel: "#fff7cf",
   },
   {
-    category: "Graphic Design",
+    category: "Design",
+    title: "HectoNow Platform",
+    description: "Designed UI/UX and brand identity for a delivery platform.",
+    tags: ["UI/UX", "Branding", "Figma"],
+    caseStudyUrl: "/projects/hecto",
+    accent: "#7d2cff",
+    tint: "#f3edff",
+    panel: "#e9fbff",
+  },
+  {
+    category: "Design System",
     title: "Brand & Marketing Design System",
-    subtitle: "Visual communication for digital and print",
     description:
-      "Clean creative layouts designed for brand presentation, social media communication, brochure content, and promotional use.",
-    outcome:
-      "Created professional assets with stronger readability, spacing, and brand consistency.",
-    deliverables: ["Social creatives", "Brochure layouts", "Brand assets"],
-    tools: ["Figma", "Canva", "Layout Design"],
-    theme: "graphic-design",
-  },
-  {
-    category: "Digital Marketing",
-    title: "Digital Marketing Campaign Execution",
-    subtitle: "Marketing execution with performance intent",
-    description:
-      "Campaign-focused work covering ad creative direction, content planning, audience thinking, and platform-ready marketing assets.",
-    outcome:
-      "Created clearer messaging and performance-focused creatives to improve user engagement.",
-    deliverables: ["Meta Ads creatives", "Campaign content", "Performance-focused copy"],
-    tools: ["Meta Ads", "Google Ads", "Creative Testing"],
-    theme: "digital-marketing",
+      "Created visual assets for branding, social media, and marketing use.",
+    tags: ["Visual Design", "Branding", "Marketing"],
+    accent: "#ff4f8b",
+    tint: "#fff0f6",
+    panel: "#f5fff8",
   },
 ];
 
+const styles = {
+  section: {
+    borderBlock: "2px solid #16131f",
+    background:
+      "radial-gradient(circle at 16px 16px, rgba(22, 19, 31, 0.09) 2px, transparent 2px) 0 0 / 34px 34px, #fffdfa",
+  },
+  header: {
+    maxWidth: "840px",
+    marginBottom: "48px",
+  },
+  heading: {
+    maxWidth: "800px",
+  },
+  subtext: {
+    maxWidth: "680px",
+    marginTop: "14px",
+    color: "#4f4a5d",
+    fontSize: "17px",
+    lineHeight: "1.7",
+  },
+  list: {
+    display: "grid",
+    gridTemplateColumns: "1fr",
+    gap: "28px",
+  },
+  card: {
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "0",
+    overflow: "hidden",
+    border: "2px solid #16131f",
+    borderRadius: "24px",
+    background: "#ffffff",
+    boxShadow: "10px 10px 0 #16131f",
+    transition: "transform 180ms ease, box-shadow 180ms ease",
+  },
+  image: {
+    flex: "1 1 320px",
+    minHeight: "310px",
+    display: "flex",
+    alignItems: "center",
+    padding: "30px",
+    borderBottom: "0",
+  },
+  mockup: {
+    width: "100%",
+    display: "grid",
+    gap: "14px",
+    border: "2px solid #16131f",
+    borderRadius: "18px",
+    background: "#ffffff",
+    padding: "20px",
+    boxShadow: "8px 8px 0 rgba(22, 19, 31, 0.2)",
+  },
+  mockupTop: {
+    width: "46%",
+    height: "16px",
+    border: "2px solid #16131f",
+    borderRadius: "999px",
+  },
+  mockupHero: {
+    width: "100%",
+    height: "126px",
+    border: "2px solid #16131f",
+    borderRadius: "16px",
+  },
+  mockupLine: {
+    width: "72%",
+    height: "14px",
+    border: "2px solid #16131f",
+    borderRadius: "999px",
+  },
+  content: {
+    flex: "1 1 360px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    padding: "clamp(28px, 5vw, 48px)",
+  },
+  category: {
+    width: "fit-content",
+    border: "2px solid #16131f",
+    borderRadius: "999px",
+    color: "#16131f",
+    fontSize: "11px",
+    fontWeight: "900",
+    letterSpacing: "0.12em",
+    marginBottom: "16px",
+    padding: "8px 12px",
+    textTransform: "uppercase",
+  },
+  title: {
+    marginBottom: "12px",
+  },
+  description: {
+    maxWidth: "560px",
+    color: "#4f4a5d",
+    fontSize: "16px",
+    lineHeight: "1.7",
+  },
+  tags: {
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "8px",
+    marginTop: "22px",
+  },
+  tag: {
+    border: "1px solid rgba(22, 19, 31, 0.18)",
+    borderRadius: "999px",
+    color: "#16131f",
+    fontSize: "12px",
+    fontWeight: "850",
+    padding: "8px 10px",
+  },
+  link: {
+    width: "fit-content",
+    minHeight: "42px",
+    display: "inline-flex",
+    alignItems: "center",
+    border: "2px solid #16131f",
+    borderRadius: "999px",
+    background: "#16131f",
+    color: "#ffffff",
+    fontSize: "14px",
+    fontWeight: "900",
+    marginTop: "24px",
+    padding: "0 16px",
+    transition: "transform 180ms ease, filter 180ms ease",
+  },
+};
+
 function Projects() {
   return (
-    <section id="projects" className="section projects-section">
-      <div className="container">
-        <div className="projects-hero">
-          <div className="section-heading">
-            <p className="section-label">Projects</p>
-            <h2>Case studies and creative work with practical outcomes.</h2>
-          </div>
+    <section id="projects" className="section projects-section" style={styles.section}>
+      <style>
+        {`
+          .funky-project-card:hover {
+            transform: translateY(-8px) rotate(-0.6deg);
+            box-shadow: 14px 14px 0 #16131f !important;
+          }
 
-          <div className="projects-summary">
-            <h3>Featured work across UX design, graphic design, and digital marketing.</h3>
-            <p>
-              Hecto and MaaBooking highlight my case-study process, while the
-              creative and marketing projects show hands-on execution.
-            </p>
-          </div>
+          .funky-project-card:nth-child(even):hover {
+            transform: translateY(-8px) rotate(0.6deg);
+          }
+
+          .funky-project-link:hover {
+            transform: translateY(-2px);
+            filter: saturate(1.2);
+          }
+
+          @media (max-width: 760px) {
+            .funky-project-card {
+              border-radius: 18px !important;
+            }
+
+            .funky-project-image {
+              flex-basis: 100% !important;
+              min-height: 240px !important;
+              border-bottom: 2px solid #16131f !important;
+            }
+
+            .funky-project-content {
+              flex-basis: 100% !important;
+            }
+          }
+        `}
+      </style>
+
+      <div className="container">
+        <div style={styles.header}>
+          <p className="section-label">Projects</p>
+          <h2 style={styles.heading}>
+            Selected work with a little more personality
+          </h2>
+          <p style={styles.subtext}>
+            UI/UX, brand, and visual design projects presented with bold mockups,
+            playful accents, and clean storytelling.
+          </p>
         </div>
 
-        <div className="projects-grid">
+        <div className="projects-grid" style={styles.list}>
           {projects.map((project) => (
-            <article className="project-card" key={project.title}>
+            <article
+              className="project-card funky-project-card"
+              style={styles.card}
+              key={project.title}
+            >
               <div
-                className={`project-image project-image-${project.theme}`}
+                className="project-image funky-project-image"
+                style={{
+                  ...styles.image,
+                  background:
+                    `linear-gradient(135deg, ${project.tint}, ${project.panel}), ` +
+                    "radial-gradient(circle at 22px 22px, rgba(22, 19, 31, 0.14) 2px, transparent 2px) 0 0 / 26px 26px",
+                }}
                 aria-hidden="true"
               >
-                <div className="project-preview-window">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                <div className="project-preview-window" style={styles.mockup}>
+                  <span style={{ ...styles.mockupTop, background: project.accent }}></span>
+                  <span style={{ ...styles.mockupHero, background: project.tint }}></span>
+                  <span style={{ ...styles.mockupLine, background: project.panel }}></span>
                 </div>
               </div>
-              <div className="project-content">
-                <p className="project-category">{project.category}</p>
-                <h3>{project.title}</h3>
-                <p className="project-subtitle">{project.subtitle}</p>
-                <p>{project.description}</p>
 
-                <div className="project-outcome">
-                  <span>Outcome</span>
-                  <p>{project.outcome}</p>
-                </div>
+              <div className="project-content funky-project-content" style={styles.content}>
+                <p
+                  className="project-category"
+                  style={{ ...styles.category, background: project.tint }}
+                >
+                  {project.category}
+                </p>
+                <h3 style={styles.title}>{project.title}</h3>
+                <p style={styles.description}>{project.description}</p>
 
-                <div className="project-deliverables">
-                  {project.deliverables.map((item) => (
-                    <span key={item}>{item}</span>
+                <div className="project-tools" style={styles.tags}>
+                  {project.tags.map((tag) => (
+                    <span style={{ ...styles.tag, background: project.panel }} key={tag}>
+                      {tag}
+                    </span>
                   ))}
                 </div>
 
-                <div className="project-tools">
-                  {project.tools.map((tool) => (
-                    <span key={tool}>{tool}</span>
-                  ))}
-                </div>
-
-                {project.caseStudyUrl ? (
-                  <a className="project-case-link" href={project.caseStudyUrl}>
-                    View Case Study
-                  </a>
-                ) : null}
+                <a
+                  className="project-case-link funky-project-link"
+                  href={project.caseStudyUrl || "#contact"}
+                  style={{ ...styles.link, boxShadow: `5px 5px 0 ${project.accent}` }}
+                >
+                  View Case Study -&gt;
+                </a>
               </div>
             </article>
           ))}

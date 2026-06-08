@@ -1,4 +1,4 @@
-import heroImage from "../assets/Deepak.png.png";
+import heroImage from "../assets/Deepakchintu.png.png";
 
 const resumeUrl = "/Deepak%20UIUX%20Designer%20Resume.pdf";
 

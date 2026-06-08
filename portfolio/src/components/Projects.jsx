@@ -4,7 +4,7 @@ const projects = [
     title: "MaaBooking Platform",
     description:
       "Redesigned the booking experience to improve clarity, usability, and user flow.",
-    tags: ["UI/UX", "Figma", "React"],
+    tags: ["UI/UX", "Figma", "Branding", "Adobe XD", "Adobe Illustrator"],
     caseStudyUrl: "/projects/maabooking",
     accent: "#20d36b",
     tint: "#eafff1",
@@ -14,7 +14,7 @@ const projects = [
     category: "Design",
     title: "HectoNow Platform",
     description: "Designed UI/UX and brand identity for a delivery platform.",
-    tags: ["UI/UX", "Branding", "Figma"],
+    tags: ["UI/UX", "Branding", "Figma", "Adobe XD", "Adobe Illustrator"],
     caseStudyUrl: "/projects/hecto",
     accent: "#7d2cff",
     tint: "#f3edff",
